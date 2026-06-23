@@ -1,112 +1,31 @@
-
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عثمان | بکس FBI</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Vazir", sans-serif;
-      background-color: #000;
-      color: #fff;
-      direction: rtl;
-    }
-    header {
-      text-align: center;
-      padding: 2rem;
-      background: #111;
-    }
-    h1 {
-      font-size: 2.5rem;
-      color: #00ffcc;
-    }
-    .btn {
-      display: inline-block;
-      margin: 1rem;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      background-color: #00ffcc;
-      color: #000;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .btn:hover {
-      background-color: #00e6b8;
-    }
-    .section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #666;
-    }
-  </style>
-</head>
+<html>
 <body>
-  <header>
-    <h1>درود عثمانم یا همون ممد اف بی ای</h1>
-    <p>به سایت بکس باشکوه اف بی آی خوش اومدید</p>
-    <a class="btn" href="https://rubika.ir/joing/IDAIJGGD0TMKSEUBVMQZFUGUPCMQAZUW" target="_blank">ورود به بکس</a>
-    <button class="btn" onclick="alert('برنامه‌ای در دسترس نیست.')">دانلود برنامه عثمان</button>
-  </header>
 
-  <section class="section">
-    <h2>🛡 درباره‌ی بکس فیلترینگ FBI</h2>
-    <p>
-      FBI یک بکس فعال در زمینه‌ی فیلترینگ اکانت‌های متخلف و مزاحم در شبکه‌ی اجتماعی روبیکا است. این بکس اولین‌بار در سال ۱۴۰۲ با هدف شناسایی و از بین بردن اکانت‌های آلوده، فیک یا آزاردهنده ساخته شد.
-    </p>
-    <p>
-      فعالیت‌های اولیه ما ساده و ابتدایی بود؛ بیشتر با استفاده از باگ‌های گپ انجام می‌شد. اما با گذشت زمان، بکس رشد کرد، تجربه به‌دست آورد و وارد مرحله‌ای جدید شد:
-      فیلتر حرفه‌ای با نظم و تاکتیک.
-    </p>
-  </section>
+<h2>نظرسنجی</h2>
 
-  <section class="section">
-    <h3>2_ معرفی اعضای</h3>
-    <ul>
-      <li>OSMAN: CREATOR</li>
-      <li>SADRA</li>
-      <li>KOROSH</li>
-      <li>MMD</li>
-      <li>ARIA</li>
-      <li>AMIX</li>
-      <li>AND OTHER......</li>
-    </ul>
-  </section>
+<form onsubmit="send(event)">
+<input id="name" placeholder="نام"><br><br>
+<input id="phone" placeholder="شماره"><br><br>
+<button>ارسال</button>
+</form>
 
-  <section class="section">
-    <h3>{تاریخچه کامل بکس}</h3>
-    <p>(تاریخچه کامل بکس برمی‌گردد به تابستان سال ۱۴۰۲)</p>
-  </section>
+<script>
+function send(e){
+ e.preventDefault();
 
-  <section class="section">
-    <h3>راه‌های ارتباطی</h3>
-    <p>راه های ارتباطی با ما:</p>
-    <ul>
-      <li>(لینک روبیکا در خود برنامه)</li>
-      <li>پیام دادن به آیدی تلگرام زیر:<br>@OSMAN_FBI77</li>
-    </ul>
-    <p>آموزش‌های فیلترینگ سایبری توسط صدرا تروریست - فیلترینگ توسط خودم، صدرا تروریست و کوروش شاه</p>
-  </section>
+ fetch("/submit", {
+   method:"POST",
+   headers:{"Content-Type":"application/json"},
+   body: JSON.stringify({
+     name: document.getElementById("name").value,
+     phone: document.getElementById("phone").value
+   })
+ });
 
-  <section class="section">
-    <blockquote style="font-size: 1.2rem; color: #aaa; border-right: 3px solid #00ffcc; padding-right: 1rem;">
-      وَلا تُصَعِّرْ خَدَّكَ لِلنَّاسِ وَلا تَمْشِ فِي الْأَرْضِ مَرَحًا ۖ إِنَّ اللَّهَ يُحِبُّ كُلَّ مُخْتَالٍ فَخُورٍا ۖ<br>
-      <span style="color: #888;">سوره لقمان: آیه ۱۸</span>
-    </blockquote>
-  </section>
+ alert("ارسال شد");
+}
+</script>
 
-  <footer>
-    <p>🛡 سازنده: عثمان</p>
-    <p>بنیان‌گذار و رهبر فعلی بکس FBI</p>
-    <p>شماره تماس: 09388331446</p>
-  </footer>
 </body>
 </html>
