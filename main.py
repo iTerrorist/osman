@@ -4,7 +4,7 @@ import requests
 app = Flask(__name__)
 
 BOT_TOKEN = "8733907884:AAGfVYq8b82kNunAiXTMSnbF2d8J0h3YXFE"
-CHAT_ID = "8478208834"
+CHAT_ID = "8528516036"
 
 @app.route("/")
 def home():
